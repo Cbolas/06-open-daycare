@@ -1,6 +1,6 @@
 # SPEC 01 — Home de gestão de crianças (réplica do mockup feed)
 
-> **Estado:** Rascunho
+> **Estado:** Aprovado
 > **Depende de:** nenhuma (primeira spec do projeto)
 > **Data:** 2026-10-10
 > **Objetivo:** Reimplementar do zero a home (`/`) como réplica visual 1:1 do conteúdo de `references/pantallas/feed.dc.html`, com estilo idêntico e todos os textos em PT-BR, sem autenticação e sem base de dados.
