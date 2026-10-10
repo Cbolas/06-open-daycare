@@ -4,6 +4,7 @@ description: Implements an approved spec. Validates that the state means "Approv
 disable-model-invocation: true
 argument-hint: <NN-spec-name>
 allowed-tools: Read, Glob, Grep, Edit, Write, AskUserQuestion, Bash(git status:*), Bash(git branch:*), Bash(git checkout:*), Bash(git log:*), Bash(git diff:*), Bash(git stash:*), Bash(cat:*), Bash(ls:*)
+slash: true
 ---
 
 # /spec-impl — Implementer of approved specs

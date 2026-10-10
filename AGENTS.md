@@ -47,3 +47,8 @@ Spanish-language daycare app ("open-daycare"): parents/guardians follow a per-ch
 
 - /spec: Usaremos esta skill para criar as especificações do projeto.
 - /spec-impl: Usaremos esta skill para criar as implementações.
+
+
+## Regras de código
+
+- Usar código limpo, nomes de variaveis, funcoes, etc em ingles 

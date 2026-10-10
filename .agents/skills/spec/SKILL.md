@@ -4,6 +4,7 @@ description: Designs and develops specs following the spec-driven method. Asks c
 disable-model-invocation: true
 argument-hint: 'short feature description or requirement'
 allowed-tools: Read, Glob, Grep, Write, AskUserQuestion, Bash(ls:*), Bash(cat:*), Bash(date:*)
+slash: true
 ---
 
 # /spec — Guided spec designer
