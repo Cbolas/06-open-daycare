@@ -1,6 +1,6 @@
 # SPEC 02 — Minha conta e Ativação de conta (réplica dos mockups perfil-nino e ninos)
 
-> **Estado:** Aprovado
+> **Estado:** Implementado
 > **Depende de:** SPEC 01
 > **Data:** 2026-10-12
 > **Objetivo:** Implementar as telas "Minha conta" (`/minha-conta`) e "Ativação de conta" (`/ativar-conta`) como réplicas visuais 1:1 do conteúdo de `references/pantallas/perfil-nino.dc.html` e `references/pantallas/ninos.dc.html`, em PT-BR, com a sidebar extraída como componente compartilhado.
@@ -61,16 +61,16 @@ Baseline: árvore limpa no HEAD (merge da SPEC 01). Cada passo deixa a app rodan
 
 ## Critérios de aceitação
 
-- [ ] `npx tsc --noEmit`, `npm run lint` e `npm run build` passam sem erros.
-- [ ] Build expõe as rotas `/`, `/minha-conta` e `/ativar-conta`.
-- [ ] Sidebar existe uma única vez (`app/_components/sidebar.tsx`), importada pela home e por `/minha-conta`.
-- [ ] Home: item ativo "Crianças"; `/minha-conta`: item ativo "Minha conta" (bg #FBE3D8, cor #D9583C, weight 800).
-- [ ] `href` de "Minha conta" (nav) é exatamente `/minha-conta`; `href` de "Crianças" (nav) é exatamente `/`; todos os demais links de navegação e CTAs são `"#"`.
-- [ ] `/minha-conta` replica o mockup: card de perfil com avatar 64px, card NOTIFICAÇÕES com 2 toggles ligados (#5FB97E, bolinha branca à direita), linhas "Alterar senha"/"Ajuda e suporte" com chevron, botão "Encerrar sessão" (#FBEAE3/#D9583C).
-- [ ] `/ativar-conta` replica o mockup: fundo #FBF4EC, coluna centrada 440px, código "7K4P9" em Fredoka com letter-spacing 3px, checkbox de autorização marcado (caixa #5FB97E sobre card #FBF1D6), CTA com gradiente (180deg,#F4977E,#EE8164).
-- [ ] Nenhum texto em espanhol nas três telas (glossário aplicado; "OpenDayCare", "Sala Soles", "Soles" e emails mantidos).
-- [ ] Toggles, inputs, checkbox, "Editar", "Encerrar sessão" e CTAs não têm handlers nem estado.
-- [ ] Zero erros no console do navegador em `/`, `/minha-conta` e `/ativar-conta`.
+- [x] `npx tsc --noEmit`, `npm run lint` e `npm run build` passam sem erros.
+- [x] Build expõe as rotas `/`, `/minha-conta` e `/ativar-conta`.
+- [x] Sidebar existe uma única vez (`app/_components/sidebar.tsx`), importada pela home e por `/minha-conta`.
+- [x] Home: item ativo "Crianças"; `/minha-conta`: item ativo "Minha conta" (bg #FBE3D8, cor #D9583C, weight 800).
+- [x] `href` de "Minha conta" (nav) é exatamente `/minha-conta`; `href` de "Crianças" (nav) é exatamente `/`; todos os demais links de navegação e CTAs são `"#"`.
+- [x] `/minha-conta` replica o mockup: card de perfil com avatar 64px, card NOTIFICAÇÕES com 2 toggles ligados (#5FB97E, bolinha branca à direita), linhas "Alterar senha"/"Ajuda e suporte" com chevron, botão "Encerrar sessão" (#FBEAE3/#D9583C).
+- [x] `/ativar-conta` replica o mockup: fundo #FBF4EC, coluna centrada 440px, código "7K4P9" em Fredoka com letter-spacing 3px, checkbox de autorização marcado (caixa #5FB97E sobre card #FBF1D6), CTA com gradiente (180deg,#F4977E,#EE8164).
+- [x] Nenhum texto em espanhol nas três telas (glossário aplicado; "OpenDayCare", "Sala Soles", "Soles" e emails mantidos).
+- [x] Toggles, inputs, checkbox, "Editar", "Encerrar sessão" e CTAs não têm handlers nem estado.
+- [x] Zero erros no console do navegador em `/`, `/minha-conta` e `/ativar-conta`.
 
 ## Decisões
 
