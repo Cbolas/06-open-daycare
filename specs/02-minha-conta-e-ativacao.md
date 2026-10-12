@@ -15,7 +15,7 @@
 
 **In:**
 
-- `app/_components/sidebar.tsx` (novo): sidebar extraída 1:1 de `app/page.tsx` — logo OpenDayCare/Sala Soles, CTA "Nova publicação", nav (Feed, Crianças, Avisos, Minha conta) com item ativo via prop, chip da usuária (Carol Gimenes, "Professora · Soles") e ícone de sair; href de "Minha conta" → `/minha-conta`, demais `href="#"`.
+- `app/_components/sidebar.tsx` (novo): sidebar extraída 1:1 de `app/page.tsx` — logo OpenDayCare/Sala Soles, CTA "Nova publicação", nav (Feed, Crianças, Avisos, Minha conta) com item ativo via prop, chip da usuária (Carol Gimenes, "Professora · Soles") e ícone de sair; href de "Minha conta" → `/minha-conta`, de "Crianças" → `/` (alteração pós-implementação solicitada pelo usuário em 2026-10-12), demais `href="#"`.
 - Refactor de `app/page.tsx`: remover a sidebar inline e usar o componente — sem mudança visual além do href "Minha conta".
 - `app/minha-conta/page.tsx` (novo): réplica 1:1 do conteúdo de `perfil-nino.dc.html` — eyebrow "AJUSTES" + h1 "Minha conta" (coluna 680px), card de perfil (avatar "C", Carol Gimenes, caro@opendaycare.com, "Professora · Sala Soles", botão "Editar"), card "NOTIFICAÇÕES" com 2 linhas e toggles estáticos ligados, card com linhas "Alterar senha" e "Ajuda e suporte", botão "Encerrar sessão".
 - `app/ativar-conta/page.tsx` (novo): réplica 1:1 do conteúdo de `ninos.dc.html` — página centrada (fundo próprio #FBF4EC, coluna 440px), badge de logo, h1 "Boas-vindas à OpenDayCare", card de convite (avatar "M", "Mateus · Sala Soles"), inputs "CÓDIGO DE CONVITE" (7K4P9), "EMAIL", "CRIAR SENHA", checkbox de autorização marcado, CTA "Ativar minha conta", rodapé "Já tem conta? Entrar".
@@ -65,7 +65,7 @@ Baseline: árvore limpa no HEAD (merge da SPEC 01). Cada passo deixa a app rodan
 - [ ] Build expõe as rotas `/`, `/minha-conta` e `/ativar-conta`.
 - [ ] Sidebar existe uma única vez (`app/_components/sidebar.tsx`), importada pela home e por `/minha-conta`.
 - [ ] Home: item ativo "Crianças"; `/minha-conta`: item ativo "Minha conta" (bg #FBE3D8, cor #D9583C, weight 800).
-- [ ] `href` de "Minha conta" (nav) é exatamente `/minha-conta`; todos os demais links de navegação e CTAs são `"#"`.
+- [ ] `href` de "Minha conta" (nav) é exatamente `/minha-conta`; `href` de "Crianças" (nav) é exatamente `/`; todos os demais links de navegação e CTAs são `"#"`.
 - [ ] `/minha-conta` replica o mockup: card de perfil com avatar 64px, card NOTIFICAÇÕES com 2 toggles ligados (#5FB97E, bolinha branca à direita), linhas "Alterar senha"/"Ajuda e suporte" com chevron, botão "Encerrar sessão" (#FBEAE3/#D9583C).
 - [ ] `/ativar-conta` replica o mockup: fundo #FBF4EC, coluna centrada 440px, código "7K4P9" em Fredoka com letter-spacing 3px, checkbox de autorização marcado (caixa #5FB97E sobre card #FBF1D6), CTA com gradiente (180deg,#F4977E,#EE8164).
 - [ ] Nenhum texto em espanhol nas três telas (glossário aplicado; "OpenDayCare", "Sala Soles", "Soles" e emails mantidos).
@@ -80,6 +80,7 @@ Baseline: árvore limpa no HEAD (merge da SPEC 01). Cada passo deixa a app rodan
 - **Sim:** tudo estático (sem useState/handlers) — precedente da busca decorativa da SPEC 01; usuário confirmou.
 - **Sim:** identidades da SPEC 01 mantidas: Carol Gimenes (avatar "C") e "Mateus · Sala Soles" (avatar "M" #A9D9E8/#1F7A93).
 - **Sim:** "Iniciar sesión"→"Entrar" (natural em PT-BR; "Encerrar sessão" já fixado na SPEC 01).
+- **Sim:** "Crianças" (nav) aponta para `/` (home existente) — alteração solicitada pelo usuário após a implementação; demais links permanecem `"#"` até existirem telas de destino.
 - **Sim:** `/ativar-conta` usa o fundo próprio #FBF4EC do mockup no wrapper da página, sem alterar o body #F6ECDF do layout.
 - **Sim:** metadata por rota com sufixo " — OpenDayCare".
 - **Não:** formulário funcional/validação, persistência, telas de destino, responsivo, dark mode, módulo de dados.
