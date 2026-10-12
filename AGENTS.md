@@ -48,6 +48,10 @@ Spanish-language daycare app ("open-daycare"): parents/guardians follow a per-ch
 - /spec: Usaremos esta skill para criar as especificações do projeto.
 - /spec-impl: Usaremos esta skill para criar as implementações.
 
+## Spec Driven Development - Agentes
+
+- spec-verify (`.opencode/agent/spec-verify.md`): verifica o checklist de "Critérios de aceitação" de uma spec em `specs/` — usa após o /spec-impl concluir uma spec, ou sempre que um checklist precisar de verificação. Roda cada critério (comandos, Playwright com visão comparando com os mockups de `references/`, Context7 para recomendações atuais do Next.js), corrige pequenas falhas, marca os checkboxes e, se tudo passar, atualiza o estado da spec para "Implementado". Nunca commita por conta própria.
+
 
 ## Regras de código
 
