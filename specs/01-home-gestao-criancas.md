@@ -1,6 +1,6 @@
 # SPEC 01 — Home de gestão de crianças (réplica do mockup feed)
 
-> **Estado:** Aprovado
+> **Estado:** Implementado
 > **Depende de:** nenhuma (primeira spec do projeto)
 > **Data:** 2026-10-10
 > **Objetivo:** Reimplementar do zero a home (`/`) como réplica visual 1:1 do conteúdo de `references/pantallas/feed.dc.html`, com estilo idêntico e todos os textos em PT-BR, sem autenticação e sem base de dados.
@@ -75,18 +75,18 @@ Baseline: HEAD atual (defaults do create-next-app); alterações não commitadas
 
 ## Critérios de aceitação
 
-- [ ] `npx tsc --noEmit` passa sem erros.
-- [ ] `npm run lint` passa sem erros.
-- [ ] `npm run build` conclui com `/` como rota estática (○).
-- [ ] `<html lang="pt-BR">` e `<title>OpenDayCare</title>`.
-- [ ] Zero erros no console do navegador ao carregar `/`.
-- [ ] Fredoka e Nunito ativas (`document.fonts.check` true); h1 em Fredoka 30px/600.
-- [ ] Estilos computados home vs mockup (mockup via HTTP estático, viewport 1440x900) idênticos em: body `rgb(246,236,223)`; sidebar 248px/`rgb(255,253,249)`/sticky; nav ativo `rgb(251,227,216)`/`rgb(217,88,60)`/800; CTA `linear-gradient(rgb(244,151,126),rgb(238,129,100))`; grade 2 colunas de 393px, gap 14; primeiro card 393x82; avatar 48px.
-- [ ] 8 cards renderizados com nomes, idades e contagens de pais da tabela.
-- [ ] Badges AMENDOIM, VINCULAR e LACTOSE presentes; demais cards com chevron.
-- [ ] Nenhum texto em espanhol na UI (glossário aplicado; "OpenDayCare" e "Sala Soles" mantidos como marca).
-- [ ] Todos os `href` de navegação são exatamente `"#"`.
-- [ ] O input de busca não tem handler nem filtragem.
+- [x] `npx tsc --noEmit` passa sem erros.
+- [x] `npm run lint` passa sem erros.
+- [x] `npm run build` conclui com `/` como rota estática (○).
+- [x] `<html lang="pt-BR">` e `<title>OpenDayCare</title>`.
+- [x] Zero erros no console do navegador ao carregar `/`.
+- [x] Fredoka e Nunito ativas (`document.fonts.check` true); h1 em Fredoka 30px/600.
+- [x] Estilos computados home vs mockup (mockup via HTTP estático, viewport 1440x900) idênticos em: body `rgb(246,236,223)`; sidebar 248px/`rgb(255,253,249)`/sticky; nav ativo `rgb(251,227,216)`/`rgb(217,88,60)`/800; CTA `linear-gradient(rgb(244,151,126),rgb(238,129,100))`; grade 2 colunas de 393px, gap 14; primeiro card 393x82; avatar 48px.
+- [x] 8 cards renderizados com nomes, idades e contagens de pais da tabela.
+- [x] Badges AMENDOIM, VINCULAR e LACTOSE presentes; demais cards com chevron.
+- [x] Nenhum texto em espanhol na UI (glossário aplicado; "OpenDayCare" e "Sala Soles" mantidos como marca).
+- [x] Todos os `href` de navegação são exatamente `"#"`.
+- [x] O input de busca não tem handler nem filtragem.
 
 ## Decisões
 
