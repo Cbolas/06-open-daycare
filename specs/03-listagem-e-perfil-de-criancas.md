@@ -1,6 +1,6 @@
 # SPEC 03 — Listagem e perfil de crianças
 
-> **Estado:** Aprovado
+> **Estado:** Implementado
 > **Depende de:** SPEC 01, SPEC 02
 > **Data:** 2026-10-17
 > **Objetivo:** Disponibilizar a listagem de crianças em `/criancas` e um perfil estático próprio para cada criança em `/kids/[id]`, como réplicas desktop em PT-BR do conteúdo de `references/pantallas/feed.dc.html` e `references/pantallas/agregar-nino.dc.html`.
@@ -119,22 +119,22 @@ Baseline: SPEC 01 e SPEC 02 implementadas. Cada passo deixa a aplicação funcio
 
 ## Critérios de aceitação
 
-- [ ] `npx tsc --noEmit`, `npm run lint` e `npm run build` passam sem erros.
-- [ ] Acessar `/` redireciona para `/criancas`.
-- [ ] O build expõe `/criancas` e os oito caminhos `/kids/{id}` definidos no modelo.
-- [ ] `/criancas` preserva a réplica desktop da listagem de `feed.dc.html`, com sidebar de 248px, grade de duas colunas, oito cards, avatares e badges da SPEC 01.
-- [ ] Os oito cards têm `href` correspondente a `/kids/{id}` e cada um abre o perfil da criança correta.
-- [ ] A sidebar usa `/criancas` como destino de “Crianças” em todas as telas e mantém esse item ativo em `/criancas` e `/kids/[id]`.
-- [ ] Cada perfil replica no desktop a estrutura de `agregar-nino.dc.html`: link de retorno, cabeçalho com avatar/nome/idade/sala, coluna principal e coluna lateral.
-- [ ] “Voltar para Crianças” aponta exatamente para `/criancas`.
-- [ ] O perfil de Mateus mostra nascimento “12 mar 2022”, ingresso “fev 2025”, alerta completo e os pais Lúcia Fernandes e Diego Fernandes com seus estados.
-- [ ] O perfil de Tomás mostra o alerta “Intolerância à lactose.” e não exibe datas ou identidades familiares inventadas.
-- [ ] Os demais perfis variam nome, avatar, idade e quantidade de pais conforme os dados conhecidos e omitem blocos sem dados.
-- [ ] `/kids/inexistente` retorna a página 404.
-- [ ] Busca, “Adicionar criança”, “Editar”, “Resumo do dia”, “Vincular outro pai” e controles sem destino não possuem handlers; os links aplicáveis usam exatamente `href="#"`.
-- [ ] Não há texto em espanhol nas interfaces; “OpenDayCare”, “Sala Soles” e nomes próprios são mantidos.
-- [ ] Metadata de `/criancas` é “Crianças — OpenDayCare” e cada perfil usa “{nome} — OpenDayCare”.
-- [ ] Zero erros no console do navegador em `/criancas` e nos oito perfis.
+- [x] `npx tsc --noEmit`, `npm run lint` e `npm run build` passam sem erros.
+- [x] Acessar `/` redireciona para `/criancas`.
+- [x] O build expõe `/criancas` e os oito caminhos `/kids/{id}` definidos no modelo.
+- [x] `/criancas` preserva a réplica desktop da listagem de `feed.dc.html`, com sidebar de 248px, grade de duas colunas, oito cards, avatares e badges da SPEC 01.
+- [x] Os oito cards têm `href` correspondente a `/kids/{id}` e cada um abre o perfil da criança correta.
+- [x] A sidebar usa `/criancas` como destino de “Crianças” em todas as telas e mantém esse item ativo em `/criancas` e `/kids/[id]`.
+- [x] Cada perfil replica no desktop a estrutura de `agregar-nino.dc.html`: link de retorno, cabeçalho com avatar/nome/idade/sala, coluna principal e coluna lateral.
+- [x] “Voltar para Crianças” aponta exatamente para `/criancas`.
+- [x] O perfil de Mateus mostra nascimento “12 mar 2022”, ingresso “fev 2025”, alerta completo e os pais Lúcia Fernandes e Diego Fernandes com seus estados.
+- [x] O perfil de Tomás mostra o alerta “Intolerância à lactose.” e não exibe datas ou identidades familiares inventadas.
+- [x] Os demais perfis variam nome, avatar, idade e quantidade de pais conforme os dados conhecidos e omitem blocos sem dados.
+- [x] `/kids/inexistente` retorna a página 404.
+- [x] Busca, “Adicionar criança”, “Editar”, “Resumo do dia”, “Vincular outro pai” e controles sem destino não possuem handlers; os links aplicáveis usam exatamente `href="#"`.
+- [x] Não há texto em espanhol nas interfaces; “OpenDayCare”, “Sala Soles” e nomes próprios são mantidos.
+- [x] Metadata de `/criancas` é “Crianças — OpenDayCare” e cada perfil usa “{nome} — OpenDayCare”.
+- [x] Zero erros no console do navegador em `/criancas` e nos oito perfis.
 
 ## Decisões
 

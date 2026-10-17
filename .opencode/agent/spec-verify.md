@@ -1,7 +1,7 @@
 ---
 description: Verifies the acceptance criteria checklist (Critérios de aceitação / Acceptance criteria) of a spec in specs/ — runs each check, corrects small failures, marks the checkboxes and updates the spec state to Implemented when all pass. Uses Context7 for current Next.js recommendations and Playwright (with vision) to compare built screens against the references/ mockups. Use after /spec-impl finishes a spec, or whenever a spec checklist needs verification.
 mode: all
-model: opencode-go/qwen3.7-plus
+model: openai/gpt-5.6-sol
 permission:
   edit: allow
   bash: allow
