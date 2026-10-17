@@ -23,7 +23,7 @@ const navItems = [
   },
   {
     label: "Crianças",
-    href: "/",
+    href: "/criancas",
     icon: (
       <svg
         width="19"
