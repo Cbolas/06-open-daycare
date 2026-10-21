@@ -263,7 +263,7 @@ export default function AtivarConta() {
           }}
         >
           Já tem conta?{" "}
-          <a href="#" style={{ color: "#C5503A", fontWeight: 800 }}>
+          <a href="/login" style={{ color: "#C5503A", fontWeight: 800 }}>
             Entrar
           </a>
         </p>
